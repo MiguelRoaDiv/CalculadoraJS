@@ -2,6 +2,7 @@
 var operandoa;
 var operandob;
 var operacion;
+x="0";
 
 function init(){
     //variables
@@ -59,6 +60,9 @@ cero.onclick = function(e){
 reset.onclick = function(e){
     resetear();
 }
+borrar.onclick = function(e){
+    retro();
+}
 
 suma.onclick = function(e){
     operandoa = resultado.textContent;
@@ -84,13 +88,17 @@ igual.onclick = function(e){
     operandob = resultado.textContent;
     resolver();
 }
+function retro(){ //Borrar sólo el último número escrito.
+    cifras=x.length; //hayar número de caracteres en pantalla  
+    x=x.substr(0,cifras-1) //quitar el ultimo caracter
+    if (x=="") {x="0";} //si ya no quedan caracteres, pondremos el 0
+    resultado.textContent=x; //mostrar resultado en pantalla	 
 
+    }
 function limpiar(){
     resultado.textContent = "";
   }
-  function borrar(){
-    resultado.textContent = "";
-  }
+
   function resetear(){
     resultado.textContent = "";
     operandoa = 0;
