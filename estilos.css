@@ -37,3 +37,32 @@ table.darkmode{
   background-color: rgb(140, 201, 230);
 
 }
+@media(max-width:320px){
+  .calculadora td button{
+   
+    width:70px;
+    height: 50px;
+    font-size: 20px;
+    
+  }
+  .calculadora{
+    
+    
+    padding:10px ;
+    
+    width:330px;
+    height:400px;
+    border-radius: 45px;
+  }
+  #resultado{
+    
+    
+    font-size: 40px;
+    margin-bottom: 10px;
+    width:300px;
+    height: 80px;
+    
+    
+  }
+
+}
